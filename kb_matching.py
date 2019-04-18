@@ -95,7 +95,7 @@ for row in arcpy.da.SearchCursor(kb15,["IID","MID","NEAR_FID","SHAPE@XY"]):
     coords = row[3]
     dist = -1
     for i in range(len(array09)):
-        if intra_test(iid,mid,array09[i][1],array09[i][2])and dso_test(code,array09[i][3]):
+        if intra_test(iid,mid,array09[i][1],array09[i][2]) and dso_test(code,array09[i][3]):
             # přiřazování kb09 ku kb15
             dist = distance(coords, array09[i][5])
             array09[i][6] = dist
